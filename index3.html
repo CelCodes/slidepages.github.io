@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Демо</title>
+	<link rel="shortcut icon" href="img/shortcut.png" type="image/jpg">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	
+	<link rel="stylesheet" href="style3.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+	
+	<style>
+      /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+      body {
+  text-align: center;
+  overflow: hidden;
+}
+
+input[type="radio"] {
+  margin-top: 10vh;
+  position: relative;
+  z-index: 5;
+  appearance: none;
+  border-radius: 50%;
+  transition: all .5s ease;
+  outline: 0;
+  cursor: pointer;
+  width: 3rem;
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-right: 20px;
+}
+input[type="radio"]:checked {
+  background-color: #fff;
+}
+
+section {
+  transition: all 0.5s cubic-bezier(0.4, 0.1, 0.1, 1) 1s;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 0;
+  opacity: .1;
+  background-color: #eee;
+}
+
+.page-1 {
+  background-color: tomato;
+  transform: scale(0.27) translate(0, 100%);
+}
+
+.page-2 {
+  background-color: crimson;
+  transform: scale(0.4) translate(-150%, 0);
+}
+
+.page-3 {
+  background-color: salmon;
+  transform: scale(0.35);
+}
+
+#page-1:checked ~ .page-1,
+#page-2:checked ~ .page-2,
+#page-3:checked ~ .page-3 {
+  opacity: 1;
+  z-index: 2;
+  transform: none;
+  transition-delay: 0s;
+}
+
+    </style>
+	
+</head>
+<body>
+
+	<nav>
+		<ul class="main-nav">
+			<li><a href="index.html">Вариант 1</a></li>
+			<li><a href="index2.html">Вариант 2</a></li>
+			<li class="active_menu"><a href="index3.html">Вариант 3</a></li>
+      <li><a href="index4.html">Вариант 4</a></li>
+      <li><a href="index5.html">Вариант 5</a></li>
+      <li><a href="index6.html">Вариант 6</a></li>
+      <li><a href="index7.html">Вариант 7</a></li>
+		</ul>
+	</nav>
+
+	 <input 
+ type="radio"
+ id="page-1"
+ name="screen" checked />
+<input 
+ type="radio"
+ id="page-2"
+ name="screen" />
+<input 
+ type="radio"
+ id="page-3"
+ name="screen" />
+
+<section class="page-1"></section>
+
+<section class="page-2"></section>
+
+<section class="page-3"></section>
+
+
+</body>
+</html>
